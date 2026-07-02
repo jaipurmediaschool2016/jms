@@ -1,0 +1,400 @@
+<html lang="en">
+<head>
+<title>JMS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+
+/* --- CLICK TO OPEN DROPDOWN FUNCTIONALITY (CUSTOM CSS) --- */
+/* Shuruat mein dono sub-menus hidden rahenge */
+#ugcSubMenu, #ugcSubMenuMobile {
+  display: none;
+  background-color: #f1f1f1;
+}
+
+/* Jab javascript se 'open-menu' class add hogi tabhi dikhega */
+.open-menu {
+  display: block !important;
+}
+
+/* Laptop/Desktop view ke liye setting */
+@media (min-width:601px) {
+  .w3-dropdown-content {
+    min-width: 180px;
+  }
+  .ugc-container {
+    position: relative;
+  }
+  /* Sub-menu ko right side me set karne ke liye */
+  #ugcSubMenu {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 140px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: #ffffff;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+
+    <a href="#" class="w3-bar-item w3-button w3-padding-large" style="padding-top: 4px !important; padding-bottom: 4px !important;">
+        <img src="Images/logo.jpg" alt="Logo" style="height: 35px; width: auto; object-fit: contain;">
+    </a>  
+    
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">DR MANISH SHUKLA</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEST SERIES</a>
+    
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More"> NOTES <i class="fa fa-caret-down"></i></button>    
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        
+        <div class="ugc-container w3-bar-block">
+          <a href="javascript:void(0)" class="w3-bar-item w3-button w3-white w3-hover-light-grey" onclick="toggleUgcMenu(event)" >
+            UGC NET <i class="fa fa-caret-right w3-right"></i>
+          </a>
+          <div id="ugcSubMenu" class="w3-bar-block w3-card-4">
+            <a href="#vol1" class="w3-bar-item w3-button w3-light-grey">VOL-1</a>
+            <a href="#vol2" class="w3-bar-item w3-button w3-light-grey">VOL-2</a>
+			<a href="#vol3" class="w3-bar-item w3-button w3-light-grey">VOL-3</a>
+          </div>
+        </div>
+        
+        <a href="#pro" class="w3-bar-item w3-button">PRO/APRO</a>
+      </div>
+		
+	  </div>  
+    <!-- a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a -->
+  </div>
+</div>
+
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px; z-index:9999;">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">DR MANISH SHUKLA</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TEST SERIES</a>
+  
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-large" onclick="toggleUgcMenu(event)">
+    NOTES: UGC NET <i class="fa fa-caret-down w3-right"></i>
+  </a>
+  <div id="ugcSubMenuMobile" class="w3-bar-block w3-dark-grey">
+    <a href="#vol1" class="w3-bar-item w3-button w3-padding-large w3-padding-left-32">VOL-1</a>
+    <a href="#vol2" class="w3-bar-item w3-button w3-padding-large w3-padding-left-32">VOL-2</a>
+	<a href="#vol3" class="w3-bar-item w3-button w3-padding-large w3-padding-left-32">VOL-3</a>
+  </div>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="slide1.jpeg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+         
+    </div>
+  </div>
+	<!--
+  <div class="mySlides w3-display-container w3-center">
+    <img src="" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        
+    </div>
+  </div>
+	<div class="mySlides w3-display-container w3-center">
+    <img src="" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>About Jaipur Media School (JMS)</h3>
+      <p><b>“Unlocking Potential. Maximizing Career Growth.”</b></p>    
+    </div> -->
+  </div>
+
+  <!-- About -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+
+    <h2 class="w3-wide">About Jaipur Media School (JMS)</h2>
+    <p class="w3-opacity"><i>“Unlocking Potential. Maximizing Career Growth.”</i></p>
+    <p class="w3-justify">Jaipur Media School (JMS) may not be decades old, but the excellence we impart has already shattered decades of traditional records. Situated in the heart of the Pink City on Tonk Road, JMS serves as the ultimate launching pad for aspiring professionals determined to build a glorious career in journalism and mass communication.
+We proud ourselves on being Rajasthan’s pioneer institute, offering specialized coaching for elite media careers and competitive exams.
+</p>
+	   <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p></p>
+        <img src="jms2.jpeg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%">
+      </div>
+      <div class="w3-third">
+        <p> JMS STARS </p>
+        <img src="jms1.jpeg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:80%"> 
+      </div>
+		
+		<div class="w3-third">
+        <p>  </p>
+        <img src="jms3.jpeg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:100%">
+      </div>
+      	        
+      </div>
+	  
+    <h2 class="w3-wide w3-center">Why Choose Jaipur Media School?</h2>
+		   <ul class="w3-ul w3-border w3-white">
+        <li class="w3-padding w3-justify"><b>Pioneer in Media Coaching:</b> The first institute in Rajasthan dedicated to comprehensive media exam preparation.</li>
+        <li class="w3-padding w3-justify"><b>Top-Tier Exam Preparation:</b> Elite coaching for NET-JRF, Public Relations Officer (PRO), Indian Information Service (IIS), and Pre-Ph.D. programs.</li>
+        <li class="w3-padding w3-justify"><b>Premium Entrance Training:</b>
+        Direct pathways into India’s most prestigious media universities, including:<br>
+-Indian Institute of Mass Communication (IIMC)<br>
+-Makhanlal Chaturvedi National University (MCNUJC, Bhopal)<br>
+-Jamia Millia Islamia<br>
+-IGNOU, Manipal, IIJNM, and more.</li>
+        <li class="w3-padding w3-justify"><b>Government Career Focus:</b> Specialized training modules designed to help students secure coveted government vacancies in the media sector.</li>
+      </ul>
+	 
+   
+</div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">NOTES</h2>
+    
+
+      <ul class="w3-ul w3-border w3-white w3-text-grey ">
+
+      </ul>
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px" id="tour">
+        <div class="w3-third w3-margin-bottom">
+          <img src="Images/pro.jpeg" alt="New York" style="width:100%" class="w3-hover-opacity" id="tour">
+          <div class="w3-container w3-white">
+            <p><b>Test Series</b></p>
+            <p class="w3-opacity">Study Material</p>
+            <p>Join our specialized targeted batches and workshops to crack PRO/APRO exams.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Test Series</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="Images/provol1.jpeg" alt="Paris" style="width:100%" class="w3-hover-opacity" id="pro">
+          <div class="w3-container w3-white">
+            <p><b>PRO/APRO Vol-1</b></p>
+            <p class="w3-opacity">Study Material Vol-1</p>
+            <p>Join our specialized targeted batches and workshops to crack PRO/APRO exams.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy PRO/APRO Vol-1</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="Images/provol2.jpeg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>PRO/APRO Vol-2 </b></p>
+            <p class="w3-opacity">Study Material Vol-2</p>
+            <p>Join our specialized targeted batches and workshops to crack PRO/APRO exams.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy PRO/APRO Vol-2 </button>
+          </div>
+        </div>
+      </div>
+		 <div class="w3-row-padding w3-padding-32" style="margin:0 -16px" >
+        <div class="w3-third w3-margin-bottom">
+          <img src="Images/Vol1.jpeg" alt="New York" style="width:100%" class="w3-hover-opacity" id="vol1">
+          <div class="w3-container w3-white">
+            <p><b>UGC NET/SET </b></p>
+            <p class="w3-opacity">Study Material Vol-1</p>
+            <p>Our pride is in providing top-tier academic material for cracking Mass Comm JRF.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy UGC NET/SET Vol-1</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom" id="#">
+          <img src="Images/vol2.jpeg" alt="Paris" style="width:100%" class="w3-hover-opacity" id="vol2">
+          <div class="w3-container w3-white">
+            <p><b>UGC NET/SET</b></p>
+            <p class="w3-opacity">Study Material Vol-2</p>
+            <p>Our pride is in providing top-tier academic material for cracking Mass Comm JRF.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy UGC NET/SET Vol-2</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="Images/Vol3.jpeg" alt="San Francisco" style="width:100%" class="w3-hover-opacity" id="vol3">
+          <div class="w3-container w3-white">
+            <p><b>UGC NET/SET</b></p>
+            <p class="w3-opacity">Study Material Vol-3</p>
+            <p>Our pride is in providing top-tier academic material for cracking Mass Comm JRF.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy UGC NET/SET Vol-3 </button>
+          </div>
+        </div>
+      </div>
+		
+    </div>
+  </div>
+
+  <!-- Ticket  -->
+  <div id="ticketModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding-32"> 
+        <span onclick="document.getElementById('ticketModal').style.display='none'" 
+       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Buy Books</h2>
+      </header>
+      <div class="w3-container">
+        <p><label><i class="fa fa-shopping-cart"></i> Books, $15 </label></p>
+        <input class="w3-input w3-border" type="text" placeholder="How many?">
+        <p><label><i class="fa fa-user"></i> Send To</label></p>
+        <input class="w3-input w3-border" type="text" placeholder="Enter email">
+        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
+        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
+        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Contact Section -->
+	<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="contact">
+  <!-- div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact" -->
+	<div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p> </p>
+        
+      </div>
+      <div class="w3-third">
+        <p>Dr Manish Shukla</p>
+        <img src="Images/drmanish.jpeg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+      
+    </div>
+     	
+    <!--  <h2 class="w3-wide w3-center">Dr. Manish Shukla</h2>  -->
+    <p class="w3-justify"><i>Dr. Manish Shukla is an Assistant Professor in the Department of Fashion Communication and the Public Relations Officer at the National Institute of Fashion Technology (NIFT), Jodhpur, under the Ministry of Textiles, Government of India. He is UGC-NET qualified in Mass Communication and holds a Master’s degree as well as a PhD in Journalism and Mass Communication from the University of Rajasthan. He also earned a Post-Graduate Diploma in Science Journalism from the prestigious Makhanlal Chaturvedi National University of Journalism and Mass Communication, Bhopal, following his Bachelor of Science degree from the University of Kota.</p>
+<p class="w3-justify">Dr. Shukla brings a rich background in professional journalism, having worked with several established national news agencies, print media organizations, and digital web portals. Alongside his industry experience, he possesses over eight years of academic and administrative experience in higher education. His core areas of expertise include print media, design research, new media, publication, public relations and advertising. An avid researcher, he has published numerous research papers in national and international journals. In recognition of his contributions, he was honored with the prestigious 'Manak Alankaran-2023' award for excellence in journalism among public relations professionals, and has also been conferred with the 'Sarvabhasha Sahityakar Samman'.</i></p>
+<div class="w3-third w3-margin-bottom">
+          <img src="book2.jpeg" alt="Paris" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">           
+            
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="book1.jpeg" alt="San Francisco" style="width:108%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+                      
+          </div>
+        </div>
+<div class="w3-third w3-margin-bottom">
+          <img src="book2.jpeg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+                      
+          </div>
+        </div>
+      </div>
+    
+		<!-- form
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+        </form>
+      </div> -->
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Image of location/map --> 
+
+
+<!-- Footer -->
+	
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+ 		
+	<div class="w3-row w3-padding-16">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> Tonk Road, Jaipur district, Rajasthan<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +91 9468651834<br>
+		
+      </div>
+		
+  <a href="https://www.facebook.com/share/1EWZxAmHBT/?mibextid=wwXIfr"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+  <a href="https://www.instagram.com/jaipurmediaschool?igsh=MXRocTg3bGhycWlpeg%3D%3D&utm_source=qr"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+  <a href="https://x.com/jmsjaipur?s=11"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+  <a href="https://m.youtube.com/@JaipurMediaSchool"><i class="fa fa-youtube w3-hover-opacity"></i></a>
+		
+	</div>
+</footer>
+
+<script>
+// Slideshow Logic
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) { x[i].style.display = "none"; }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  if (x[myIndex-1]) x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Mobile Hamburger Toggle
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// --- NEW 100% WORKING CLICK TOGGLE FUNCTION ---
+function toggleUgcMenu(event) {
+  // Isse click event page par bhatakta nahi hai aur sahi element par trigger hota hai
+  event.preventDefault();
+  event.stopPropagation(); 
+  
+  var desktopMenu = document.getElementById("ugcSubMenu");
+  var mobileMenu = document.getElementById("ugcSubMenuMobile");
+
+  // Desktop Toggle
+  if (desktopMenu) {
+    desktopMenu.classList.toggle("open-menu");
+  }
+
+  // Mobile Toggle
+  if (mobileMenu) {
+    mobileMenu.classList.toggle("open-menu");
+  }
+}
+
+// Agar user bahar kahin bhi click kare to open menu apne aap band ho jaye
+window.onclick = function(event) {
+  var desktopMenu = document.getElementById("ugcSubMenu");
+  if (desktopMenu && !event.target.closest('.ugc-container')) {
+    desktopMenu.classList.remove("open-menu");
+  }
+}
+</script>
+
+</body>
+</html>
