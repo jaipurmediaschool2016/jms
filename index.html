@@ -53,9 +53,9 @@ body {font-family: "Lato", sans-serif}
         <img src="Images/logo.jpg" alt="Logo" style="height: 35px; width: auto; object-fit: contain;">
     </a>  
     
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HOME</a>
     <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">DR MANISH SHUKLA</a>
+    
     <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEST SERIES</a>
     
     <div class="w3-dropdown-hover w3-hide-small">
@@ -75,35 +75,43 @@ body {font-family: "Lato", sans-serif}
         
         <a href="#pro" class="w3-bar-item w3-button">PRO/APRO</a>
       </div>
-		
-	  </div>  
-	   <a href="#cont" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-    <!-- a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a -->
+	</div> 
+	  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">DR MANISH SHUKLA</a>
+	<a href="#cont" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
   </div>
 </div>
 
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px; z-index:9999;">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
   <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">DR MANISH SHUKLA</a>
+
   <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TEST SERIES</a>
   
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-large" onclick="toggleUgcMenu(event)">
     NOTES: UGC NET <i class="fa fa-caret-down w3-right"></i>
   </a>
   <div id="ugcSubMenuMobile" class="w3-bar-block w3-dark-grey">
-    <a href="#vol1" class="w3-bar-item w3-button w3-padding-large w3-padding-left-32">VOL-1</a>
-    <a href="#vol2" class="w3-bar-item w3-button w3-padding-large w3-padding-left-32">VOL-2</a>
-	<a href="#vol3" class="w3-bar-item w3-button w3-padding-large w3-padding-left-32">VOL-3</a>
+    <a href="#vol1" class="w3-bar-item w3-button w3-padding-large w3-padding-left-32" onclick="myFunction()">VOL-1</a>
+    <a href="#vol2" class="w3-bar-item w3-button w3-padding-large w3-padding-left-32" onclick="myFunction()">VOL-2</a>
+	<a href="#vol3" class="w3-bar-item w3-button w3-padding-large w3-padding-left-32" onclick="myFunction()">VOL-3</a>
   </div>
+  
+  <a href="#pro" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PRO/APRO</a>
+	  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">DR MANISH SHUKLA</a>
+  <a href="#cont" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
 </div>
-    <a href="#pro" class="w3-bar-item w3-button">PRO/APRO</a>
-      </div>
-		
-	  </div>  
-	   <a href="#cont" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <div class="mySlides w3-display-container w3-center">
+    <img src="Images/slide1.jpeg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small"></div>
+  </div>
+	
+</div>
+   
     <!-- a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a -->
-  </div>
-</div>
+  
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
@@ -160,8 +168,8 @@ We proud ourselves on being Rajasthan’s pioneer institute, offering specialize
   </div>
 
   <!-- Services -->
-  <div class="w3-black" id="tour">
-    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+  <div class="w3-gray" id="tour">
+    <div class="w3-container w3-content w3-padding-50" style="max-width:800px">
       <h2 class="w3-wide w3-center">NOTES</h2>
     
 
