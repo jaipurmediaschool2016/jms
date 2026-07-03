@@ -40,16 +40,6 @@ body {font-family: "Lato", sans-serif}
     background-color: #ffffff;
   }
 }
-
-img{max-width:100%;height:auto}
-iframe{max-width:100%}
-@media (max-width:600px){
-.w3-bar-item{font-size:14px!important;padding:10px 8px!important}
-h1,h2,h3{font-size:1.6rem!important}
-.w3-third,.w3-quarter,.w3-half{width:100%!important}
-.w3-content{max-width:100%!important;padding:0 10px}
-table{display:block;overflow-x:auto}
-}
 </style>
 </head>
 <body>
@@ -106,7 +96,14 @@ table{display:block;overflow-x:auto}
 	<a href="#vol3" class="w3-bar-item w3-button w3-padding-large w3-padding-left-32">VOL-3</a>
   </div>
 </div>
-
+    <a href="#pro" class="w3-bar-item w3-button">PRO/APRO</a>
+      </div>
+		
+	  </div>  
+	   <a href="#cont" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <!-- a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a -->
+  </div>
+</div>
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
@@ -377,7 +374,7 @@ function toggleUgcMenu(event) {
   }
 }
 
-// Agar user bahar kahin bhi click kare to open menu apne aap band ho jaye
+// 
 window.onclick = function(event) {
   var desktopMenu = document.getElementById("ugcSubMenu");
   if (desktopMenu && !event.target.closest('.ugc-container')) {
